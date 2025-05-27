@@ -1,0 +1,716 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 20px 4px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+    border-bottom: 2px solid #d2691e; /* Borde inferior color café */
+}
+
+.btn-menu {
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-menu:hover {
+    background: gray;
+    transition: color 0.2s;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    gap: 18px;
+}
+
+.logo {
+    height: 64px;
+    width: 64px;
+    object-fit: contain;
+}
+
+.titulo {
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.titulo:hover {
+    color: #ff9245; /* Cambia el color al pasar el mouse */
+    transition: color 0.2s;
+    -webkit-text-stroke: 0.5px #2da0a0;
+
+}
+
+header nav {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos del nav */
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+header nav a:hover {
+    color: #ff9245;
+    -webkit-text-stroke: 0.1px #2da0a0;
+}
+
+nav a.activo {
+    color: #2da0a0;
+    font-weight: bold;
+    border-bottom: 2px solid #2da0a0;
+    padding-bottom: 2px;
+}
+
+body {
+    padding-top: 100px; /* Ajusta según la altura del header */
+}
+
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px 16px; /* Reduce padding lateral para evitar desbordes */
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    text-align: left;
+    color: #ff9245;
+    -webkit-text-stroke: 0.5px #2da0a0; /* Borde de las letras para navegadores WebKit */
+}
+
+.main-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.main-text {
+    flex: 2;
+    text-align: left;
+    font-size: 1.35rem; /* Texto más grande */
+    line-height: 1.7;
+}
+
+.main-text h1 {
+    font-size: 3rem; /* Título más grande */
+    margin-bottom: 24px;
+}
+
+.logo-principal {
+    flex: 1;
+    max-width: 300px; /* Imagen más grande */
+    height: auto;
+    display: block;
+}
+
+.recetas-creativas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.recetas-creativas h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2da0a0;
+    text-align: left;
+    width: 100%;
+    padding-left: 16px;
+}
+
+.recetas-creativas .carta {
+    background: #fff8f0;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 20px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 220px;
+    margin: 0 10px;
+    transition: transform 0.2s;
+}
+
+.recetas-creativas .carta:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+}
+
+.recetas-creativas .carta img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.recetas-creativas .mazapan {
+    color: #e53935; 
+}
+
+.recetas-creativas .pelon {
+    color: #388e3c;
+}
+
+.recetas-creativas .snickers {
+    color: #7b4f22; 
+}
+
+.cartas-contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.tamales {
+    display: flex;
+    flex-direction: row; /* Imagen a la derecha, texto a la izquierda */
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.tamales h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2da0a0;
+    text-align: left;
+    width: 100%;
+    padding-left: 16px;
+}
+
+.tamales-texto {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;   /* Alinea el contenido al final (derecha) */
+    min-width: 220px;
+    text-align: right;       /* Alinea el texto a la derecha */
+}
+
+.tamales-texto h2,
+.tamales-texto p {
+    text-align: right;       /* Asegura que ambos estén alineados a la derecha */
+    width: 100%;
+}
+
+.tamales-texto p {
+    text-align: right;
+    width: 100%;
+    font-size: 1.5rem; /* Texto del párrafo más grande */
+    line-height: 1.7;
+}
+
+.tamales-img-contenedor {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 220px;
+}
+
+.tamales-img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    display: block;
+}
+
+.tamales-dulces {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 48px auto 0 auto;
+    gap: 24px;
+}
+
+.tamales-dulces h2 {
+    font-size: 2rem;
+    color: #2da0a0; /* Mismo color que los otros h2 */
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.tamales-dulces img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    display: block;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.footer {
+    width: 100%;
+    background: #999999; /* Gris oscuro */
+    color: #fff;
+    text-align: center;
+    padding: 24px 0 12px 0;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer .social-links {
+    display: flex;
+    gap: 22px;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.footer .social-links img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: #fff;
+    padding: 6px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.footer .social-links img:hover {
+    transform: scale(1.13) rotate(-8deg);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    background: #ff9245;
+}
+
+/* Colores para los títulos de cada receta */
+.receta#mazapan h2 {
+    color: #e53935; /* rojo para Mazapán */
+}
+
+.receta#pelon h2 {
+    color: #388e3c; /* verde para Pelón pelo rico */
+}
+
+.receta#snickers h2 {
+    color: #7b4f22; /* café para Snickers */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.12), 0 1px 0 rgba(0,0,0,0.08);
+}
+
+/* Ajusta el tamaño de las imágenes de recetas para que sean más grandes */
+.receta-img {
+    width: 100%;
+    max-width: 540px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 16px;
+    background: #fff;
+    margin: 0 auto 24px auto;
+    display: block;
+}
+
+/* Asegura que el contenido del main no se desborde */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px 16px; /* Reduce padding lateral para evitar desbordes */
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Justifica el texto de las descripciones, ingredientes y preparación */
+.receta-info .descripcion,
+.receta-ingredientes ul,
+.receta-preparacion ol {
+    text-align: justify;
+}
+
+/* Mejora el espaciado de las listas de ingredientes y preparación */
+.receta-ingredientes ul,
+.receta-preparacion ol {
+    -webkit-columns: 2;
+    columns: 2;
+    column-gap: 32px;
+    margin: 0 12px 0 12px;   /* Espacio a ambos lados */
+    padding: 0 0 0 24px;     /* Más espacio a la izquierda */
+    font-size: 1rem;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.receta-ingredientes ul li,
+.receta-preparacion ol li {
+    break-inside: avoid;
+    margin-bottom: 12px;
+    list-style-position: inside;
+    padding-left: 4px; /* Espacio extra para separar del borde */
+}
+
+/* Divide listas de ingredientes y preparación en dos columnas en escritorio */
+.receta-ingredientes ul,
+.receta-preparacion ol {
+    -webkit-columns: 2;
+    columns: 2;
+    column-gap: 24px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 18px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.receta-ingredientes ul li,
+.receta-preparacion ol li {
+    break-inside: avoid;
+    margin-bottom: 8px;
+    list-style-position: inside;
+}
+
+/* En móvil, vuelve a una sola columna */
+@media (max-width: 900px) {
+    .receta-ingredientes ul,
+    .receta-preparacion ol {
+        -webkit-columns: 1;
+        columns: 1;
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 10px;
+    }
+    header nav {
+        width: 100%;
+        justify-content: center; /* Centra horizontalmente en móviles */
+        gap: 10px;
+        margin-top: 10px;
+    }
+    header .logo {
+        height: 32px;
+    }
+    body {
+        padding-top: 110px; /* Ajusta según la nueva altura del header */
+    }
+}
+@media (max-width: 900px) {
+    .main-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logo-principal {
+        margin-top: 20px;
+        max-width: 160px;
+    }
+    .tamales {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    .tamales-img-contenedor {
+        width: 100%;
+        align-items: center;
+    }
+    .tamales-img {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+    .tamales-texto h2 {
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+/* Letras más grandes en listas y párrafos de recetas */
+.receta-info .descripcion,
+.receta-ingredientes ul,
+.receta-ingredientes ul li,
+.receta-preparacion ol,
+.receta-preparacion ol li,
+.receta-preparacion ul,
+.receta-preparacion ul li,
+.receta p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+/* h2 más grandes y alineados a la izquierda en la página de recetas */
+.receta h2 {
+    font-size: 2.5rem;
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.cards-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.card {
+    background: #fff8f0;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 20px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+}
+
+.card-img {
+    width: 200px;
+    height: 140px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+/* h2 de la sección utensilios igual que los del inicio */
+.utensilios h2 {
+    font-size: 2.5rem;
+    text-align: left;
+    color: #2da0a0;
+    margin-bottom: 18px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.12), 0 1px 0 rgba(0,0,0,0.08);
+}
+
+/* Texto más grande para la introducción de utensilios */
+.utensilios p {
+    font-size: 1.35rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+/* Suscripción y contacto */
+.acerca, .contacto, .suscripcion-plan {
+    background: #f8f8f8;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 32px 24px;
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.form-contacto button {
+    background: #2da0a0;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+.form-contacto button:hover {
+    background: #ff9245;
+}
+
+.suscripcion-plan .plan-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 24px 18px;
+    text-align: center;
+    margin-top: 18px;
+}
+
+.suscripcion-plan .precio {
+    font-size: 2.2rem;
+    color: #2da0a0;
+    font-weight: bold;
+    margin: 18px 0 10px 0;
+}
+
+.suscripcion-plan .precio span {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.btn-suscribir {
+    background: #ff9245;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.btn-suscribir:hover {
+    background: #2da0a0;
+}
+
+/* Contenedor para secciones de suscripción */
+.suscripcion-secciones {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+}
+
+/* Acerca de nosotros ocupa más ancho */
+.suscripcion-columna {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    flex: 2 1 480px;
+    min-width: 340px;
+    max-width: 700px;
+}
+
+/* Contacto ocupa todo el ancho del main, debajo de acerca de nosotros y pago */
+.suscripcion-plan {
+    flex: 0 1 280px;
+    min-width: 240px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #f8f8f8;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 32px 18px;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+
+/* Contacto debajo de las columnas, ocupando todo el main */
+.contacto {
+    width: 100%;
+    max-width: 100%;
+    margin: 40px 0 0 0;
+    padding: 32px 32px;
+    box-sizing: border-box;
+    background: #f8f8f8;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    /* No flex ni grid aquí, solo bloque normal */
+}
+
+@media (max-width: 900px) {
+    .suscripcion-secciones {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .suscripcion-columna,
+    .suscripcion-plan {
+        max-width: 100%;
+        min-width: 0;
+    }
+    .suscripcion-plan {
+        margin-top: 32px;
+    }
+    .contacto {
+        margin-top: 32px;
+        padding: 24px 8px;
+    }
+}
+
+/* Acerca de nosotros: más alto, texto grande y justificado */
+.acerca {
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 32px;
+}
+
+.acerca p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+}
